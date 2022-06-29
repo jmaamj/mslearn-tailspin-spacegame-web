@@ -45,5 +45,5 @@ stages:
     - task: AzureWebAppContainer@1
       inputs:
        appName: $(WebAppName)
-       azureSubscription: 'Dimminz'
+       azureSubscription: 'Creed'
        imageName: $(RegistryName)/$(webRepository):$(build.buildId)
