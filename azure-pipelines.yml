@@ -50,3 +50,12 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
+
+- task: UniversalPackages@0
+  inputs:
+    command: 'publish'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    feedsToUsePublish: 'internal'
+    vstsFeedPublish: '1259efda-c225-4729-90dc-669412bdd907'
+    vstsFeedPackagePublish: 'deuce'
+    versionOption: 'major'
