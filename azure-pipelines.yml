@@ -51,13 +51,11 @@ steps:
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
 
-
-
 - task: UniversalPackages@0
   inputs:
     command: 'publish'
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
     feedsToUsePublish: 'internal'
-    vstsFeedPublish: 'Paratha'
-    vstsFeedPackagePublish: 'deuce'
+    vstsFeedPublish: '8696eb91-2273-43e2-b83b-33481774660b/ac9458ed-f7b2-4773-85f7-4dca38db40ae'
+    vstsFeedPackagePublish: 'space'
     versionOption: 'major'
